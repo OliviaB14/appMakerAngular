@@ -1,6 +1,6 @@
 export interface TreeNode {
   name: string;
   showChildren: boolean;
-  children: any[];
+  children: TreeNode[];
   icon?: string;
 }

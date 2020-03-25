@@ -26,4 +26,10 @@ export class TreeViewComponent implements OnInit {
     }
   }
 
+  addNodeTo(node: TreeNode) {
+    node.children.push({ name: "Node", children: [], icon: "ri-arrow-down-s-line", showChildren: false });
+    node.showChildren = true;
+    this.getNodeIcon(node);
+  }
+
 }

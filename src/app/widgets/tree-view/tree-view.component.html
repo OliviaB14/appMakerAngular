@@ -5,6 +5,7 @@
       <i [class]="node.icon"></i>
     </span>
     <span> {{ node.name }} </span>
+    <span (click)="addNodeTo(node)" class="add clickable"><i class="ri-add-box-line"></i></span>
     <app-tree-view *ngIf="node.showChildren" [treeData]="node.children"></app-tree-view>
   </li>
 </ul>
