@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <div #toolbarEl class="row justify-content-between toolbar">
+      <div class="group col" *ngFor="let group of toolbar">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <button *ngFor="let item of group.items"
+                    (click)="onToolbarCommand(item.command);click(item.command)"><i [class]="item.icon"></i></button>
+          </div>
+        </div>
+    </div>
+    <div id="myDropdown" class="dropdown-content" *ngIf="showMoreDropdown">
+      <a *ngFor="let item of dropdownMore">
+        {{item.label}}
+      </a>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 px-0">
+      <div #contentEdit contenteditable
+           class="editor"></div>
+    </div>
+  </div>
+</div>
+
