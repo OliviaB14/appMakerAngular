@@ -32,4 +32,12 @@ export class TreeViewComponent implements OnInit {
     this.getNodeIcon(node);
   }
 
+  delete(node: TreeNode) {
+    var find = this.treeData.find(n => n == node);
+    if(find != null) {
+      this.treeData = this.treeData.filter(n => {
+        return n != node
+      });
+    }
+  }
 }
