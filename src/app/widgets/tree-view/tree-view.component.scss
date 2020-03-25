@@ -1,0 +1,17 @@
+.tree {
+  list-style: none;
+
+  .icon {
+    font-weight: bold;
+  }
+
+  .add {
+    color: green;
+    vertical-align: middle;
+  }
+
+  .delete {
+    color: red;
+    vertical-align: middle;
+  }
+}

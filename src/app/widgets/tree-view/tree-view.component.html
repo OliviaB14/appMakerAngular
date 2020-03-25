@@ -1,0 +1,12 @@
+
+<ul *ngIf="treeData" class="tree">
+  <li *ngFor="let node of treeData">
+    <span *ngIf="node.children.length > 0" class="icon clickable" (click)="toggleChild(node)">
+      <i [class]="node.icon"></i>
+    </span>
+    <span> {{ node.name }} </span>
+    <span (click)="addNodeTo(node)" class="add clickable"><i class="ri-add-box-line"></i></span>
+    <span (click)="delete(node)" class="delete clickable"><i class="ri-delete-bin-line"></i></span>
+    <app-tree-view *ngIf="node.showChildren" [treeData]="node.children"></app-tree-view>
+  </li>
+</ul>
