@@ -22,9 +22,12 @@ export class TextEditorComponent implements OnInit {
         { label: 'Bold', icon: 'ri-bold', tag: 0, command: 'bold'},
         { label: 'Italic', icon: 'ri-italic', tag: 1, command: 'italic'},
         { label: 'Underline', icon: 'ri-underline', tag: 2, command: 'underline'},
+/*
         { label: 'More', icon: 'ri-font-size', tag: -1, command: null},
+*/
       ]
     },
+/*
     {
       groupName: 'colors',
       items: [
@@ -32,6 +35,7 @@ export class TextEditorComponent implements OnInit {
         { label: 'Backcolor', icon: 'ri-edit-circle-fill', tag: 3, command: 'backColor'},
       ]
     },
+*/
     {
       groupName: 'lists',
       items: [
@@ -41,20 +45,23 @@ export class TextEditorComponent implements OnInit {
         { label: 'Outdent', icon: 'ri-indent-decrease', tag: 4, command: 'outdent'},
       ]
     },
+/*
     {
       groupName: 'images',
       items: [
         { label: 'Add Image', icon: 'ri-image-add-line', tag: 3, command: 'insertImage'},
       ]
     },
+*/
+/*
     {
       groupName: 'additional',
       items: [
         { label: 'Link', icon: 'ri-links-line', tag: 5, command: 'bold'},
         { label: 'Code', icon: 'ri-code-line', tag: 6, command: 'bold'},
-        { label: 'More', icon: 'ri-more-2-line', tag: 6, command: null},
       ]
     },
+*/
   ];
   dropdownMore: ToolbarButton[] = [
     { label: 'Indent', icon: 'ri-indent-increase', tag: -1, command: null}
