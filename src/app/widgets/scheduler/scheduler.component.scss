@@ -1,0 +1,10 @@
+button{
+  border: 1px solid grey;
+  background: #ffc8b2 !important;
+
+  &.active {
+    background: #cfff81 !important;
+  }
+}
+
+

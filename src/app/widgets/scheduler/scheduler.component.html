@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col">
+    <button *ngFor="let button of buttons"
+            (click)="selectPeriod(button)"
+            [ngClass]="{'active': button.isSelected}">
+      {{button.label}}
+    </button>
+  </div>
+</div>
+
+<app-scheduler-day *ngIf="buttons[0].isSelected"></app-scheduler-day>
+<app-scheduler-week *ngIf="buttons[1].isSelected"></app-scheduler-week>
+<app-scheduler-month *ngIf="buttons[2].isSelected"></app-scheduler-month>

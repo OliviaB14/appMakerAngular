@@ -1,0 +1,32 @@
+<div class="row mb-5">
+  <div class="col-12">
+
+  <div class="row border-bottom">
+    <div class="col text-center p-3"
+         [ngClass]="{'disabled': day.isDisabled}"
+         *ngFor="let day of SchedulerDays">
+      {{day.name}}
+    </div>
+  </div>
+
+  <div class="row" id="content">
+    <div class="col border example-list" cdkDropList
+         [ngClass]="{'disabled': day.isDisabled}"
+         (cdkDropListDropped)="dropEventsInDay($event, day)"
+         *ngFor="let day of SchedulerDays">
+      <div class="scheduler-event row border-bottom example-box clickable"
+           *ngFor="let event of day.eventsList"
+           cdkDrag>
+        <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+        <div class="col-12" [ngStyle]="{'background': event.category.color}">
+          <i [class]="event.category.icon"></i> {{event.title}}
+          <p>{{event.hour}}</p>
+        </div>
+        <div class="col-12">
+          {{event.description}}
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
