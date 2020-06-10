@@ -39,6 +39,10 @@ export class SchedulerDayComponent implements OnInit {
     this.setEventsToDay();
   }
 
+  addEvent(day: Day, event) {
+    day.eventsList.push(event);
+  }
+
   setEventsToDay() {
     this.SchedulerDays.forEach(day => {
       day.eventsList = [...this.shuffleArray(this.Events)];

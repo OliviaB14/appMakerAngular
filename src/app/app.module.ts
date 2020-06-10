@@ -11,6 +11,7 @@ import { SchedulerComponent } from './widgets/scheduler/scheduler.component';
 import { SchedulerDayComponent } from './widgets/scheduler-day/scheduler-day.component';
 import { SchedulerWeekComponent } from './widgets/scheduler-week/scheduler-week.component';
 import { SchedulerMonthComponent } from './widgets/scheduler-month/scheduler-month.component';
+import { SchedulerEventFormComponent } from './widgets/scheduler-event-form/scheduler-event-form.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { SchedulerMonthComponent } from './widgets/scheduler-month/scheduler-mon
     SchedulerDayComponent,
     SchedulerWeekComponent,
     SchedulerMonthComponent,
+    SchedulerEventFormComponent,
   ],
   imports: [
     BrowserModule,
